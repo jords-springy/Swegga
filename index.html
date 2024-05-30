@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-za" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="./css/styling.css">
+<title>JORDAN SPRINGVELDT</title>
+
+</head>
+
+<body>
+<div id="page">
+
+	<div id="banner">
+		<img src="./images/delivery.gif" alt="Delivery" style="height: 85px; width: 300px;">
+	</div>
+
+	<div id="navigation">
+		<img src="./images/links.gif" alt="Links" usemap="#Map">
+		<map name="Map">
+			<area shape="rect" coords="10,5;95,35" href="index.html" alt="">
+			<area shape="rect" coords="105,5;190,35" href="services.html" alt="">
+			<area shape="rect" coords="205,5;300,35" href="products.html" alt="">
+			<area shape="rect" coords="310,5;440,35" href="orderStatus.html" alt="">
+			<area shape="rect" coords="450,5;555,35" href="contactUS.html" alt="">
+		</map>
+	</div>
+	<!--JORDAN SPRINGVELDT-->
+	<div id="sidebar">
+		<img src="./images/swegga.jpg" alt="Swegga">
+	</div>
+
+		<div id="main">
+            <form action="orders">
+                <h1 class="caption">Product Summary</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th1">Description</th>
+                            <th class="th1">Size</th>
+                            <th class="th1">Colour</th>
+                            <th class="th1">Price</th>
+                            <th class="th1">Quantity</th>
+                            <th class="th1">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="female.html" target="_blank">Female Ski Jackets</a></td>
+                            <td>
+								<select id="size" name="Size">
+									<option value="S">Small</option>
+									<option value="M">Medium</option>
+									<option value="L">Large</option>
+								</select>
+                            </td>
+                            <td>
+                                <select id="colour" name="Colour">
+									<option value="R">Red</option>
+									<option value="P">Pink</option>
+									<option value="B">Black</option>
+								</select>
+                            </td>
+                            <td class="price">150.95</td>
+                            <td class="quantity"><input type="text">
+							</td>
+							<td female-total total></td> 
+                        
+                        </tr>
+                        <tr>
+                            <td><a href="male.html" target="_blank">Male Ski Jackets</a></td>
+                            <td>
+                                <select id="size" name="Size">
+									<option value="S">Small</option>
+									<option value="M">Medium</option>
+									<option value="L">Large</option>
+								</select>
+                                </ul>
+                              </div>
+                            </td>
+                            <td>
+                                
+								<select id="colour" name="Colour">
+									<option value="R">Red</option>
+									<option value="B">Blue</option>
+									<option value="W">White</option>
+								</select>
+                            </td>
+                            <td class="">180.95</td>
+                            <td class="quantity"><input type="text"></td>
+                               <td male-total total></td>
+                        
+                        </tr>
+                        <tr>
+                            <td colspan="4">Click to confirm and process your order:</td>
+                            <td><button id="calculate" class="btn2">
+                              Total Price
+                            </button></td>
+							<td overall-total></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+		<footer id="footer">
+			<div class="copyright">
+				©2014 Swegga Fashion - Jordan Springveldt
+			</div>
+		</footer>
+</div>
+<script src="./script/index.js" defer></script>
+</body>
+</html>
