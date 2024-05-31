@@ -24,7 +24,7 @@ function calculate() {
     f_total_value = (f_price * f_quantity).toFixed(2);
     console.log('f_total_value: ' + f_total_value);
 
-    sum_total = parseFloat(m_total_value) + parseFloat(f_total_value);
+    sum_total = parseFloat(parseFloat(m_total_value) + parseFloat(f_total_value));
     console.log('sum_total: ' + sum_total);
 
     document.getElementById('m_total').innerText = 'R ' + m_total_value;
