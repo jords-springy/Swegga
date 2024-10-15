@@ -1,5 +1,4 @@
-/* JORDAN SPRINGVELDT */
-
+/* Base Styles */
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 85%;
@@ -9,64 +8,119 @@ body {
 }
 
 #page {
-    width: 810px;
+    max-width: 810px;
     background-color: white;
     margin: 10px auto;
     border: 2px solid black;
     padding: 10px;
 }
 
+/* Banner */
 #banner {
     margin: 0 auto 1em;
-    height: 85px;
+    height: auto;
     width: 100%;
     display: flex;
-    justify-content: center; /* Centering the image */
+    justify-content: center;
 }
 
 #banner img {
-    max-height: 85px; /* Keep the image from exceeding the height */
-    max-width: 100%; /* Ensure image is responsive */
+    max-height: 85px;
+    max-width: 100%;
 }
 
+/* Sidebar */
 #sidebar {
     width: 150px;
-    height: auto; /* Allow height to adjust based on content */
     background-color: white;
-    margin-bottom: .7em;
+    margin-bottom: 0.7em;
     float: left;
 }
 
+/* Main Content */
 #main {
-    margin-left: 160px; /* Adjusted for sidebar width */
+    margin-left: 160px;
 }
 
-.copyright {
-    font-size: 90%;
-    text-align: right;
-    margin: 0;
-}
-
-/* The styles for the table */
+/* Table Styles */
 table {
     border: 1px solid black;
     border-collapse: collapse;
-    width: 100%; /* Ensure table takes full width of main section */
+    width: 100%;
 }
 
 th, td {
     border: 1px solid black;
-    padding: .2em .7em;
+    padding: 0.2em 0.7em;
     font-size: 95%;
+}
+
+/* Footer */
+#footer {
+    margin-top: 0.5em;
+    border-top: 2px solid gray;
+    padding-top: 0.7em;
+    clear: left;
 }
 
 .alignRight {
     text-align: right;
 }
 
-#footer {
-    margin-top: 0.5em;
-    border-top: 2px solid gray;
-    padding-top: 0.7em;
-    clear: left;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjusts page container on smaller screens */
+    #page {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+        border: none;
+    }
+
+    /* Stack sidebar above main content */
+    #sidebar {
+        float: none;
+        width: 100%;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    /* Remove margin to let main content take full width */
+    #main {
+        margin-left: 0;
+    }
+
+    /* Stack table cells vertically */
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        border: none;
+        padding: 0.5em 0;
+    }
+
+    /* Adjust footer */
+    #footer {
+        text-align: center;
+        font-size: 90%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #page {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    /* Sidebar remains next to main content but reduced width */
+    #sidebar {
+        width: 120px;
+    }
+
+    #main {
+        margin-left: 130px;
+    }
 }
