@@ -1,5 +1,4 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -7,20 +6,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="./css/styling.css">
     <title>JORDAN SPRINGVELDT</title>
-
 </head>
 
 <body>
     <div id="page">
+        <header id="banner">
+            <img src="./images/delivery.gif" alt="Delivery" style="height: 85px; width: 100%;">
+        </header>
 
-        <div id="banner">
-            <img src="./images/delivery.gif" alt="Delivery" style="height: 85px; width: 300px;">
-        </div>
-
-       
-        <!--JORDAN SPRINGVELDT-->
         <div id="sidebar">
-            <img src="./images/swegga.jpg" alt="Swegga">
+            <img src="./images/swegga.jpg" alt="Swegga" style="width: 100%;">
         </div>
 
         <div id="main">
@@ -55,10 +50,8 @@
                                 </select>
                             </td>
                             <td id="f_price" class="price">150.95</td>
-                            <td class="quantity"><input id="f_quantity" type="text">
-                            </td>
+                            <td class="quantity"><input id="f_quantity" type="text"></td>
                             <td id="f_total" class="total"></td>
-
                         </tr>
                         <tr>
                             <td>Male Ski Jackets</td>
@@ -68,39 +61,37 @@
                                     <option value="M">Medium</option>
                                     <option value="L">Large</option>
                                 </select>
-                                </ul>
+                            </td>
+                            <td>
+                                <select id="colour" name="Colour">
+                                    <option value="R">Red</option>
+                                    <option value="B">Blue</option>
+                                    <option value="W">White</option>
+                                </select>
+                            </td>
+                            <td id="m_price" class="">180.95</td>
+                            <td class="quantity"><input id="m_quantity" type="text"></td>
+                            <td id="m_total" class="total"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Click to confirm and process your order:</td>
+                            <td>
+                                <button id="calculate_button" class="btn2">
+                                    Total Price
+                                </button>
+                            </td>
+                            <td id="sum_total" class="total"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
         </div>
-        </td>
-        <td>
 
-            <select id="colour" name="Colour">
-                <option value="R">Red</option>
-                <option value="B">Blue</option>
-                <option value="W">White</option>
-            </select>
-        </td>
-        <td id="m_price" class="">180.95</td>
-        <td class="quantity"><input id="m_quantity" type="text"></td>
-        <td id="m_total" class="total"></td>
-
-        </tr>
-        <tr>
-            <td colspan="4">Click to confirm and process your order:</td>
-            <td><button id="calculate_button" class="btn2">
-                    Total Price
-                </button></td>
-            <td id="sum_total" class="total"></td>
-
-        </tr>
-        </tbody>
-        </table>
-        </form>
-    </div>
-    <footer id="footer">
-        <div class="copyright">
-            ©2014 Swegga Fashion - Jordan Springveldt
-        </div>
-    </footer>
+        <footer id="footer">
+            <div class="copyright">
+                ©2014 Swegga Fashion - Jordan Springveldt
+            </div>
+        </footer>
     </div>
     <script src="./script/index.js" defer></script>
 </body>

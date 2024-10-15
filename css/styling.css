@@ -19,8 +19,7 @@ body {
 #banner {
     margin-bottom: 1em;
     height: 85px;
-    width: 300px;
-    margin-left: 150px;
+    width: 100%; /* Make the banner full width */
 }
 
 #navigation {
@@ -44,21 +43,18 @@ body {
     margin-left: 150px;
 }
 
-
-
 .copyright {
     font-size: 90%;
     text-align: right;
     margin: 0;
 }
 
-/* the styles for the table*/
+/* The styles for the table */
 
 table {
     border: 1px solid black;
     border-collapse: collapse;
 }
-
 
 caption {
     font-family: Arial, Helvetica, sans-serif;
@@ -78,7 +74,6 @@ th {
 
 .alignRight {
     text-align: right;
-
 }
 
 #footer {
@@ -88,4 +83,4 @@ th {
     clear: left;
 }
 
-/*JORDAN SPRINGVELDT
+/*JORDAN SPRINGVELDT */
