@@ -46,7 +46,7 @@ document.getElementById('f_quantity').addEventListener('input', calculate);
 // Function to show Toastify notification
 function showToast(total) {
     Toastify({
-        text: "The total price is: R " + total,
+        text: "Order is Processed: R " + total,
         duration: 3000, // Duration in milliseconds
         close: true, // Show close button
         gravity: "top", // Position: top or bottom
