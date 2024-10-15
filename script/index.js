@@ -1,34 +1,41 @@
 // JORDAN SPRINGVELDT
 
-calculate_button = document.getElementById('calculate_button');
+const calculate_button = document.getElementById('calculate_button');
 calculate_button.addEventListener('click', (event) => {
     event.preventDefault();
     console.log('clicked');
     calculate();
-})
+});
+
 console.log('click addEventListener');
 
 function calculate() {
-    m_price = document.getElementById('m_price').innerText
+    const m_price = parseFloat(document.getElementById('m_price').innerText);
     console.log('m_price: ' + m_price);
-    f_price = document.getElementById('f_price').innerText
+    
+    const f_price = parseFloat(document.getElementById('f_price').innerText);
     console.log('f_price: ' + f_price);
 
-    m_quantity = document.getElementById('m_quantity').value;
+    const m_quantity = parseFloat(document.getElementById('m_quantity').value) || 0;
     console.log('m_quantity: ' + m_quantity);
-    f_quantity = document.getElementById('f_quantity').value;
+    
+    const f_quantity = parseFloat(document.getElementById('f_quantity').value) || 0;
     console.log('f_quantity: ' + f_quantity);
 
-    m_total_value = (m_price * m_quantity).toFixed(2);
+    const m_total_value = (m_price * m_quantity).toFixed(2);
     console.log('m_total_value: ' + m_total_value);
-    f_total_value = (f_price * f_quantity).toFixed(2);
+    
+    const f_total_value = (f_price * f_quantity).toFixed(2);
     console.log('f_total_value: ' + f_total_value);
 
-    sum_total = (parseFloat(m_total_value) + parseFloat(f_total_value)).toFixed(2);
+    const sum_total = (parseFloat(m_total_value) + parseFloat(f_total_value)).toFixed(2);
     console.log('sum_total: ' + sum_total);
 
     document.getElementById('m_total').innerText = 'R ' + m_total_value;
     document.getElementById('f_total').innerText = 'R ' + f_total_value;
     document.getElementById('sum_total').innerText = 'R ' + sum_total;
-
 }
+
+// Add input event listeners for real-time calculation
+document.getElementById('m_quantity').addEventListener('input', calculate);
+document.getElementById('f_quantity').addEventListener('input', calculate);
