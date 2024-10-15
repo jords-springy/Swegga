@@ -10,12 +10,12 @@
 
 <body>
     <div id="page">
-        <header id="banner">
-            <img src="./images/delivery.gif" alt="Delivery" style="height: 85px; width: 100%;">
-        </header>
+        <div id="banner">
+            <img src="./images/delivery.gif" alt="Delivery" />
+        </div>
 
         <div id="sidebar">
-            <img src="./images/swegga.jpg" alt="Swegga" style="width: 100%;">
+            <img src="./images/swegga.jpg" alt="Swegga" />
         </div>
 
         <div id="main">
@@ -36,49 +36,47 @@
                         <tr>
                             <td>Female Ski Jackets</td>
                             <td>
-                                <select id="size" name="Size">
+                                <select id="size-female" name="Size">
                                     <option value="S">Small</option>
                                     <option value="M">Medium</option>
                                     <option value="L">Large</option>
                                 </select>
                             </td>
                             <td>
-                                <select id="colour" name="Colour">
+                                <select id="colour-female" name="Colour">
                                     <option value="R">Red</option>
                                     <option value="P">Pink</option>
                                     <option value="B">Black</option>
                                 </select>
                             </td>
                             <td id="f_price" class="price">150.95</td>
-                            <td class="quantity"><input id="f_quantity" type="text"></td>
+                            <td class="quantity"><input id="f_quantity" type="text" /></td>
                             <td id="f_total" class="total"></td>
                         </tr>
                         <tr>
                             <td>Male Ski Jackets</td>
                             <td>
-                                <select id="size" name="Size">
+                                <select id="size-male" name="Size">
                                     <option value="S">Small</option>
                                     <option value="M">Medium</option>
                                     <option value="L">Large</option>
                                 </select>
                             </td>
                             <td>
-                                <select id="colour" name="Colour">
+                                <select id="colour-male" name="Colour">
                                     <option value="R">Red</option>
                                     <option value="B">Blue</option>
                                     <option value="W">White</option>
                                 </select>
                             </td>
                             <td id="m_price" class="">180.95</td>
-                            <td class="quantity"><input id="m_quantity" type="text"></td>
+                            <td class="quantity"><input id="m_quantity" type="text" /></td>
                             <td id="m_total" class="total"></td>
                         </tr>
                         <tr>
                             <td colspan="4">Click to confirm and process your order:</td>
                             <td>
-                                <button id="calculate_button" class="btn2">
-                                    Total Price
-                                </button>
+                                <button id="calculate_button" class="btn2">Total Price</button>
                             </td>
                             <td id="sum_total" class="total"></td>
                         </tr>
@@ -88,12 +86,10 @@
         </div>
 
         <footer id="footer">
-            <div class="copyright">
-                ©2014 Swegga Fashion - Jordan Springveldt
-            </div>
+            <div class="copyright">©2014 Swegga Fashion - Jordan Springveldt</div>
         </footer>
     </div>
+    
     <script src="./script/index.js" defer></script>
 </body>
-
 </html>
