@@ -1,126 +1,168 @@
 /* Base Styles */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial', sans-serif;
     font-size: 85%;
-    background-color: #4766B8;
+    background-color: #f4f6f9;
     margin: 0;
     padding: 0;
 }
 
 #page {
-    max-width: 810px;
-    background-color: white;
-    margin: 10px auto;
-    border: 2px solid black;
-    padding: 10px;
+    max-width: 900px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 /* Banner */
 #banner {
-    margin: 0 auto 1em;
-    height: auto;
-    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 #banner img {
-    max-height: 85px;
-    max-width: 100%;
+    max-height: 80px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 /* Sidebar */
 #sidebar {
+    background-color: #f4f6f9;
     width: 150px;
-    background-color: white;
-    margin-bottom: 0.7em;
+    margin-bottom: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     float: left;
+    text-align: center;
+}
+
+#sidebar img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 /* Main Content */
 #main {
-    margin-left: 160px;
+    margin-left: 180px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h1.caption {
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #4766B8;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* Table Styles */
 table {
-    border: 1px solid black;
-    border-collapse: collapse;
     width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
 th, td {
-    border: 1px solid black;
-    padding: 0.2em 0.7em;
-    font-size: 95%;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 90%;
+}
+
+th {
+    background-color: #4766B8;
+    color: #ffffff;
+    border: none;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+td input[type="text"],
+td select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn2 {
+    background-color: #4766B8;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 90%;
+}
+
+.btn2:hover {
+    background-color: #3c57a5;
 }
 
 /* Footer */
 #footer {
-    margin-top: 0.5em;
-    border-top: 2px solid gray;
-    padding-top: 0.7em;
-    clear: left;
-}
-
-.alignRight {
-    text-align: right;
+    text-align: center;
+    font-size: 0.8em;
+    color: #555;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    /* Adjusts page container on smaller screens */
     #page {
-        width: 100%;
-        padding: 10px;
-        margin: 0;
-        border: none;
+        width: 95%;
+        padding: 15px;
+        margin: 0 auto;
     }
 
-    /* Stack sidebar above main content */
     #sidebar {
         float: none;
         width: 100%;
         margin-bottom: 1em;
-        text-align: center;
     }
 
-    /* Remove margin to let main content take full width */
     #main {
         margin-left: 0;
+        padding: 10px;
     }
 
-    /* Stack table cells vertically */
     table, th, td {
         display: block;
         width: 100%;
+        text-align: left;
     }
 
     th, td {
-        text-align: left;
-        border: none;
-        padding: 0.5em 0;
+        padding: 10px;
     }
 
-    /* Adjust footer */
     #footer {
         text-align: center;
-        font-size: 90%;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     #page {
         width: 90%;
-        padding: 15px;
     }
     
-    /* Sidebar remains next to main content but reduced width */
     #sidebar {
-        width: 120px;
+        width: 130px;
     }
 
     #main {
-        margin-left: 130px;
+        margin-left: 150px;
     }
 }
