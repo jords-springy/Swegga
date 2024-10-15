@@ -4,7 +4,8 @@ const calculate_button = document.getElementById('calculate_button');
 calculate_button.addEventListener('click', (event) => {
     event.preventDefault();
     console.log('clicked');
-    calculate();
+    const total = calculate(); // Capture the total from the calculate function
+    showToast(total); // Show Toastify notification with the total price
 });
 
 console.log('click addEventListener');
@@ -34,17 +35,22 @@ function calculate() {
     document.getElementById('m_total').innerText = 'R ' + m_total_value;
     document.getElementById('f_total').innerText = 'R ' + f_total_value;
     document.getElementById('sum_total').innerText = 'R ' + sum_total;
+
+    return sum_total; // Return the sum_total to be used in the Toastify notification
 }
 
 // Add input event listeners for real-time calculation
 document.getElementById('m_quantity').addEventListener('input', calculate);
 document.getElementById('f_quantity').addEventListener('input', calculate);
 
-function showAlert(total) {
-    swal({
-        title: "Total Price",
+// Function to show Toastify notification
+function showToast(total) {
+    Toastify({
         text: "The total price is: R " + total,
-        icon: "success",
-        button: "OK",
-    });
+        duration: 3000, // Duration in milliseconds
+        close: true, // Show close button
+        gravity: "top", // Position: top or bottom
+        position: 'right', // Position: left, center, or right
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)", // Background color
+    }).showToast();
 }
